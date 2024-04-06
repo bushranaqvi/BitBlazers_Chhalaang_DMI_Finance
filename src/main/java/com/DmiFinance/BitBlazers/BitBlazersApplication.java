@@ -4,7 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 import java.util.Map;
+
+import static com.DmiFinance.BitBlazers.JsonXmlParser.readFiles;
+import static com.DmiFinance.BitBlazers.JsonXmlParser.tryfunc;
 //import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 //import org.springframework.web.multipart.support.*
 //commons.CommonsMultipartResolver;
@@ -14,10 +19,12 @@ import java.util.Map;
 @RestController
 public class BitBlazersApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         SpringApplication.run(BitBlazersApplication.class, args);
         System.out.println("Helloo DMI Finance");
 
+        tryfunc();
+        readFiles();
 
     }
 
