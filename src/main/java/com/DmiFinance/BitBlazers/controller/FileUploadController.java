@@ -1,5 +1,6 @@
 package com.DmiFinance.BitBlazers.controller;
 
+import com.DmiFinance.BitBlazers.JsonXmlParser;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -38,6 +39,7 @@ public class FileUploadController {
             // Save the file to the local file system
             Path path = Paths.get(filepath);
             Files.write(path, file.getBytes());
+            JsonXmlParser.readFiles(String.valueOf(path));
 
             return ResponseEntity.status(HttpStatus.OK)
                     .body("File uploaded successfully: " + filename);

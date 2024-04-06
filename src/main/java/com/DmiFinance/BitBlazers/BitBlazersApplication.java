@@ -24,7 +24,6 @@ public class BitBlazersApplication {
         System.out.println("Helloo DMI Finance");
 
         tryfunc();
-        readFiles();
 
     }
 
@@ -50,26 +49,5 @@ public class BitBlazersApplication {
         // Process the received text
         return text;
     }
-
-//	@RequestMapping(
-//			value = "/process",
-//			method = RequestMethod.POST,
-//			consumes = "text/plain")
-//	public void process1(@RequestBody String payload) throws Exception {
-//		System.out.println(payload);
-//	}
-//
-//	@PostMapping(value="/processJson")
-//	public void process2(@RequestBody com.fasterxml.jackson.databind.JsonNode payload) {
-//		System.out.println(payload);
-//
-//	}
-
-//	@Bean
-//	public CommonsMultipartResolver multipartResolver() {
-//		CommonsMultipartResolver resolver = new CommonsMultipartResolver();
-//		resolver.setMaxUploadSize(10000000); // Example: 10MB limit
-//		return resolver;
-//	}
 
 }
